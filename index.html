@@ -623,13 +623,48 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:56px 0 34p
         <h3>Built through Christ Consciousness</h3>
         <p>The Prophet's Circle is the community around Zeus The Prophet, built through Christ Consciousness and the love of Jesus Christ, who is Zaher's Lord and Savior first and foremost. A place to belong, grow and walk the journey together.</p>
         <p style="color:var(--muted);margin:0 0 22px">Follow along as the Circle grows, and step in through Instagram.</p>
-        <div class="hp-links"><a class="btn btn-pri btn-sm" href="https://www.instagram.com/theprophetscircle/" target="_blank" rel="noopener">Follow the Circle on Instagram</a><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/theofficialzeuspodcast/" target="_blank" rel="noopener">The Zeus Podcast</a></div>
+        <div class="hp-links"><a class="btn btn-pri btn-sm" href="#waitlist">Join the Waitlist</a><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/theprophetscircle/" target="_blank" rel="noopener">Follow the Circle on Instagram</a><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/theofficialzeuspodcast/" target="_blank" rel="noopener">The Zeus Podcast</a></div>
       </div>
     </div>
     <div class="values" style="margin-top:22px">
       <div class="value"><b>Belong</b><span>A community, not an audience. Real people walking together.</span></div>
       <div class="value"><b>Grow</b><span>Faith, truth and getting better than yesterday, together.</span></div>
       <div class="value"><b>Walk together</b><span>Built on the love of Jesus Christ, first and foremost.</span></div>
+    </div>
+    <div id="waitlist" style="margin-top:34px;padding:28px;border:1px solid var(--line2);border-radius:var(--r);background:var(--panel)">
+      <span class="tag" style="color:var(--gold);font-family:'Libre Franklin';font-weight:800;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase">Join the Waitlist</span>
+      <h3 style="margin:10px 0 8px">Step inside the Circle. This is a brotherhood, not a mailing list.</h3>
+      <p style="color:var(--muted);margin:0 0 20px">Real people, real faith, real growth, walking together through Christ Consciousness. Spots are limited, and the door opens to the waitlist first. Put your name down now and be first in when the Circle opens.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 22px">
+        <div style="padding:20px;border:1px solid var(--line2);border-radius:var(--r);background:var(--bg2)">
+          <b style="font-family:'Libre Franklin';font-size:1.05rem">Join the Waitlist, free</b>
+          <p style="color:var(--muted);margin:8px 0 14px">Get in line and be first to hear when the Circle opens. No charge, just your name down.</p>
+          <a class="btn btn-ghost btn-sm" href="#circle-waitlist">Join the Waitlist</a>
+        </div>
+        <div style="padding:20px;border:1px solid var(--gold);border-radius:var(--r);background:var(--bg2)">
+          <b style="font-family:'Libre Franklin';font-size:1.05rem">Go Premium, US$29.99, skip the line</b>
+          <p style="color:var(--muted);margin:8px 0 14px">Instant entry into the Circle, plus 30 minutes one on one with Zaher to answer your questions. Limited spots, once they are gone they are gone.</p>
+          <a class="btn btn-pri btn-sm" href="https://zaherneck.gumroad.com/l/wbsxgq" target="_blank" rel="noopener">Join Premium Now, US$29.99</a>
+        </div>
+      </div>
+      <form id="circle-waitlist" style="display:grid;gap:12px;max-width:520px">
+        <label style="display:grid;gap:6px;font-weight:700">Your name<input required name="name" type="text" placeholder="Your full name" style="padding:12px 14px;border-radius:10px;border:1px solid var(--line2);background:var(--bg2);color:var(--ink);font-size:1rem" /></label>
+        <label style="display:grid;gap:6px;font-weight:700">Phone number<input required name="phone" type="tel" placeholder="Your phone number" style="padding:12px 14px;border-radius:10px;border:1px solid var(--line2);background:var(--bg2);color:var(--ink);font-size:1rem" /></label>
+        <label style="display:grid;gap:6px;font-weight:700">Email address<input required name="email" type="email" placeholder="Your email address" style="padding:12px 14px;border-radius:10px;border:1px solid var(--line2);background:var(--bg2);color:var(--ink);font-size:1rem" /></label>
+        <label style="display:grid;gap:6px;font-weight:700">Why do you want in? <span style="font-weight:400;color:var(--muted)">(optional)</span><textarea name="why" rows="3" placeholder="Tell us in a line or two" style="padding:12px 14px;border-radius:10px;border:1px solid var(--line2);background:var(--bg2);color:var(--ink);font-size:1rem"></textarea></label>
+        <button class="btn btn-pri" type="submit" style="justify-self:start">Join the Waitlist</button>
+        <p id="waitlist-done" style="display:none;color:var(--gold);font-weight:700;margin:0">You are on the list, brother. Welcome to the Circle. Keep an eye on your inbox.</p>
+      </form>
+      <script>
+      document.getElementById('circle-waitlist').addEventListener('submit', function(e){
+        e.preventDefault();
+        var f = e.target;
+        var body = 'Name: ' + f.name.value + '%0D%0A' + 'Phone: ' + f.phone.value + '%0D%0A' + 'Email: ' + f.email.value + '%0D%0A' + 'Why: ' + (f.why.value || '');
+        window.location.href = 'mailto:admin@iqualityonline.com?subject=' + encodeURIComponent("The Prophet's Circle waitlist: " + f.name.value) + '&body=' + body;
+        document.getElementById('waitlist-done').style.display = 'block';
+        f.reset();
+      });
+      </script>
     </div>
   </div></section>
 </div><!-- /view-circle -->
