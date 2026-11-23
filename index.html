@@ -37,6 +37,7 @@
   --ink:#eef3fb; --muted:#9fb0c9; --faint:#8aa0c0;
   --blue:#2ea8ff; --blue2:#0395fc; --cyan:#38e1ff; --gold:#e3b959;
   --grad:linear-gradient(92deg,#38e1ff 0%,#2ea8ff 55%,#7aa8ff 100%);
+  --gold-grad:linear-gradient(92deg,#f6d789 0%,#e3b959 55%,#b98a1e 100%);
   --shadow:0 24px 60px rgba(0,0,0,.5);
   --r:18px;
 }
@@ -300,6 +301,7 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:56px 0 34p
 .page-head{padding:148px 0 18px}
 .page-head h1,.page-head h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.015em;margin:16px 0 12px}
 .page-head h1 .grad,.page-head h2 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.page-head h2 .grad-gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .page-head p{color:var(--muted);max-width:38rem;margin:0;font-size:1.05rem}
 .backlink{display:inline-flex;align-items:center;gap:8px;color:var(--muted);text-decoration:none;font-weight:700;font-family:"Libre Franklin";font-size:.9rem}
 .backlink:hover{color:var(--blue)}
@@ -551,7 +553,7 @@ picture{display:contents}
 <div class="view" id="view-about">
   <section class="page-head"><div class="wrap">
     <a class="backlink" href="#/home">← Back to Home</a>
-    <h2>About <span class="grad">Zaher Neket</span></h2>
+    <h2>About <span class="grad-gold">Zaher Neket</span></h2>
     <p>The man behind I.Quality Online: his picture, his details, his mission, and why he created this business.</p>
   </div></section>
 
