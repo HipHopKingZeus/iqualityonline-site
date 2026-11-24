@@ -4,7 +4,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="dark light" />
-<meta name="description" content="I.Quality Online, the home of The Zeus Podcast, Zeus The Prophet's music, books and guides by Zaher Neket, Melbourne." />
+<meta name="description" id="metaDescription" content="The Melbourne home of The Zeus Podcast, books and guides by Zaher Neket, known as Zeus The Prophet, plus his music and The Prophet's Circle, a free community." />
+<meta name="author" content="Zaher Neket" />
+<link rel="alternate" hreflang="en-AU" href="https://iqualityonline.com/" />
+<link rel="preload" as="image" href="assets/logo-iq-online.webp" fetchpriority="high" />
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.png?v=3" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
 <link rel="manifest" href="/manifest.json" />
@@ -12,21 +15,25 @@
 <link rel="canonical" href="https://iqualityonline.com/" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#05070d" />
-<meta property="og:title" content="I.Quality Online | The Zeus Podcast, Books, Music and The Prophet's Circle" />
-<meta property="og:description" content="I.Quality Online, the home of The Zeus Podcast, Zeus The Prophet's music, books and guides by Zaher Neket, Melbourne." />
+<meta property="og:site_name" content="I.Quality Online" />
+<meta property="og:title" id="ogTitle" content="I.Quality Online | The Zeus Podcast, Books, Guides and Music" />
+<meta property="og:description" id="ogDescription" content="The Melbourne home of The Zeus Podcast, books and guides by Zaher Neket, known as Zeus The Prophet, plus his music and The Prophet's Circle, a free community." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://iqualityonline.com/" />
 <meta property="og:image" content="https://iqualityonline.com/assets/og-image.jpg" />
+<meta property="og:image:secure_url" content="https://iqualityonline.com/assets/og-image.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="I.Quality Online logo: a gold eagle with wings spread above the words I.Quality Online in dark blue, with Est. 2024 underneath" />
 <meta property="og:locale" content="en_AU" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="I.Quality Online | The Zeus Podcast, Books, Music and The Prophet's Circle" />
-<meta name="twitter:description" content="I.Quality Online, the home of The Zeus Podcast, Zeus The Prophet's music, books and guides by Zaher Neket, Melbourne." />
+<meta name="twitter:site" content="@zeustheprophet" />
+<meta name="twitter:title" id="twitterTitle" content="I.Quality Online | The Zeus Podcast, Books, Guides and Music" />
+<meta name="twitter:description" id="twitterDescription" content="The Melbourne home of The Zeus Podcast, books and guides by Zaher Neket, known as Zeus The Prophet, plus his music and The Prophet's Circle, a free community." />
 <meta name="twitter:image" content="https://iqualityonline.com/assets/og-image.jpg" />
 <meta name="twitter:image:alt" content="I.Quality Online logo: a gold eagle with wings spread above the words I.Quality Online in dark blue, with Est. 2024 underneath" />
-<title>I.Quality Online | The Zeus Podcast, Books, Music and The Prophet's Circle</title>
+<title>I.Quality Online | The Zeus Podcast, Books, Guides and Music</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;800;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -72,7 +79,7 @@ header.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop
 .nav-cta{white-space:nowrap}
 .brand b span{color:var(--blue)}
 nav.main{margin-left:auto;display:flex;gap:4px}
-nav.main a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;padding:10px 14px;border-radius:10px;transition:.2s}
+nav.main a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;padding:10px 14px;border-radius:10px;transition:.2s;white-space:nowrap;flex-shrink:0}
 nav.main a:hover,nav.main a.active{color:var(--ink);background:var(--panel2)}
 .nav-cta{margin-left:10px;flex:none}
 #burger{display:none;flex:none;align-items:center;justify-content:center;margin-left:auto;background:var(--panel);border:1px solid var(--line);border-radius:10px;color:var(--ink);width:46px;height:46px;cursor:pointer;font-size:1.15rem}
@@ -223,7 +230,7 @@ section.blk{padding:96px 0}
 .feat{border:1px solid var(--line);border-radius:24px;background:var(--panel);overflow:hidden}
 .feat .f-covers{display:grid;grid-template-columns:1fr 1fr;gap:0}
 .feat .f-covers a{display:block;overflow:hidden}
-.feat .f-covers img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s}
+.feat .f-covers img{width:100%;aspect-ratio:1/1;object-fit:contain;background:var(--bg2);padding:12px;transition:transform .5s}
 .feat .f-covers a:hover img{transform:scale(1.06)}
 .feat .f-body{padding:32px}
 .feat h3{font-size:1.55rem;font-weight:800;margin-bottom:10px}
@@ -288,7 +295,7 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:56px 0 34p
 @media(max-width:620px){.trio-grid{grid-template-columns:1fr}}
 .trio-grid .prod .cover{aspect-ratio:4/4.1}
 .about-teaser{border:1px solid var(--line2);border-radius:24px;background:linear-gradient(120deg,var(--panel2),var(--panel));padding:42px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;box-shadow:var(--shadow)}
-.about-teaser h3{font-size:1.55rem;font-weight:800;margin-bottom:8px}
+.about-teaser h2,.about-teaser h3{font-size:1.55rem;font-weight:800;margin-bottom:8px}
 .about-teaser p{color:var(--muted);margin:0;max-width:34rem}
 .mission-band{border:1px solid var(--line);border-radius:24px;background:var(--panel);padding:38px}
 .mission-band h3{font-size:1.5rem;font-weight:800;margin-bottom:12px}
@@ -341,11 +348,15 @@ picture{display:contents}
       "@id": "https://iqualityonline.com/#organization",
       "name": "I.Quality Online",
       "url": "https://iqualityonline.com/",
-      "logo": "https://iqualityonline.com/assets/og-image.jpg",
+      "description": "Independent Melbourne publishing house: the home of The Zeus Podcast, books and guides by Zaher Neket, the music of Zeus The Prophet, and The Prophet's Circle, a free community.",
+      "foundingDate": "2024",
+      "address": { "@type": "PostalAddress", "addressLocality": "Melbourne", "addressRegion": "VIC", "addressCountry": "AU" },
+      "logo": "https://iqualityonline.com/assets/logo-iq-online.jpg",
       "founder": { "@id": "https://iqualityonline.com/#person" },
       "sameAs": [
         "https://www.instagram.com/zeustheprophet/",
         "https://www.instagram.com/theofficialzeuspodcast/",
+        "https://www.instagram.com/theprophetscircle/",
         "https://www.youtube.com/@TheZeusPodcastNetwork",
         "https://www.youtube.com/@zeustheprophet",
         "https://x.com/zeustheprophet",
@@ -354,20 +365,124 @@ picture{display:contents}
       ]
     },
     {
+      "@type": "WebSite",
+      "@id": "https://iqualityonline.com/#website",
+      "name": "I.Quality Online",
+      "url": "https://iqualityonline.com/",
+      "inLanguage": "en-AU",
+      "publisher": { "@id": "https://iqualityonline.com/#organization" }
+    },
+    {
       "@type": "Person",
       "@id": "https://iqualityonline.com/#person",
       "name": "Zaher Neket",
       "alternateName": "Zeus The Prophet",
-      "jobTitle": "Founder of I.Quality Online",
-      "url": "https://iqualityonline.com/#/about"
+      "jobTitle": "Founder of I.Quality Online, host of The Zeus Podcast",
+      "description": "Melbourne author, musician and host of The Zeus Podcast, known as Zeus The Prophet.",
+      "url": "https://iqualityonline.com/",
+      "sameAs": [
+        "https://www.instagram.com/zeustheprophet/",
+        "https://linkedin.com/in/zaherneket",
+        "https://zeustheprophet.com/"
+      ]
     },
     {
       "@type": "PodcastSeries",
       "@id": "https://iqualityonline.com/#podcast",
       "name": "The Zeus Podcast",
-      "url": "https://iqualityonline.com/#/podcast",
+      "description": "Real conversations with artists, thinkers and everyday people with a story worth hearing. Hosted by Zaher Neket as Zeus The Prophet, recorded on Riverside from Melbourne.",
+      "url": "https://iqualityonline.com/",
+      "image": "https://iqualityonline.com/assets/zeus-podcast-cover.jpg",
+      "numberOfEpisodes": 31,
       "author": { "@id": "https://iqualityonline.com/#person" },
+      "inLanguage": "en-AU",
+      "sameAs": [
+        "https://open.spotify.com/show/2GhCPrS6n4L3o1JjZVriK3",
+        "https://podcasts.apple.com/au/podcast/the-zeus-podcast/id1870829275",
+        "https://www.youtube.com/@TheZeusPodcastNetwork"
+      ]
+    },
+    {
+      "@type": "MusicGroup",
+      "@id": "https://iqualityonline.com/#music",
+      "name": "Zeus The Prophet",
+      "url": "https://iqualityonline.com/",
+      "sameAs": [
+        "https://open.spotify.com/artist/5orsEGpptFpSh7wBzyQkyI",
+        "https://music.apple.com/au/artist/zeus-the-prophet/1573601282",
+        "https://www.youtube.com/@zeustheprophet"
+      ],
+      "album": { "@type": "MusicAlbum", "name": "The Rise of the Prophet", "albumReleaseType": "EP", "byArtist": { "@id": "https://iqualityonline.com/#music" } }
+    },
+    {
+      "@type": "Book",
+      "name": "The Spiritual Survival Code",
+      "author": { "@id": "https://iqualityonline.com/#person" },
+      "bookFormat": "https://schema.org/EBook",
+      "inLanguage": "en-AU",
+      "url": "https://zaherneck.gumroad.com/l/jnlnql",
+      "offers": { "@type": "Offer", "price": "7.99", "priceCurrency": "AUD", "url": "https://zaherneck.gumroad.com/l/jnlnql", "availability": "https://schema.org/InStock" }
+    },
+    {
+      "@type": "Book",
+      "name": "The Ultimate Melbourne Travel Guide",
+      "author": { "@id": "https://iqualityonline.com/#person" },
+      "bookFormat": "https://schema.org/EBook",
+      "inLanguage": "en-AU",
+      "url": "https://zaherneck.gumroad.com/l/owmzj",
+      "offers": { "@type": "Offer", "price": "14.99", "priceCurrency": "AUD", "url": "https://zaherneck.gumroad.com/l/owmzj", "availability": "https://schema.org/InStock" }
+    },
+    {
+      "@type": "Book",
+      "name": "The Ultimate Melbourne Culinary Guide",
+      "author": { "@id": "https://iqualityonline.com/#person" },
+      "bookFormat": "https://schema.org/EBook",
+      "inLanguage": "en-AU",
+      "numberOfPages": 153
+    },
+    {
+      "@type": "Book",
+      "name": "The Magical Journey of Kitana and Brandon",
+      "author": { "@id": "https://iqualityonline.com/#person" },
+      "bookFormat": "https://schema.org/EBook",
+      "inLanguage": "en-AU",
+      "url": "https://www.amazon.com.au/dp/B0DDHXWC13",
+      "offers": { "@type": "Offer", "price": "4.99", "priceCurrency": "AUD", "url": "https://www.amazon.com.au/dp/B0DDHXWC13", "availability": "https://schema.org/InStock" }
+    },
+    {
+      "@type": "Book",
+      "name": "The Extraordinary Adventures of Kitana and Brandon: The Golden Timeline",
+      "author": { "@id": "https://iqualityonline.com/#person" },
+      "bookFormat": "https://schema.org/EBook",
       "inLanguage": "en-AU"
+    },
+    {
+      "@type": "Book",
+      "name": "The Blueprint to Happiness",
+      "author": { "@id": "https://iqualityonline.com/#person" },
+      "bookFormat": "https://schema.org/EBook",
+      "inLanguage": "en-AU"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://iqualityonline.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do I buy the books?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Magical Journey of Kitana and Brandon is on Kindle through Amazon Australia for A$4.99. Amazon US lists the same book in US dollars, so the number there is not the same as A$4.99. The Spiritual Survival Code is on Gumroad for A$7.99, and The Ultimate Melbourne Travel Guide is on Gumroad as Melbourne Travel Guide for A$14.99. All three are on this page and in full on the E-Books page." }
+        },
+        {
+          "@type": "Question",
+          "name": "When are the Melbourne guides out?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Ultimate Melbourne Travel Guide is out now, published live on Gumroad as Melbourne Travel Guide for A$14.99. The 153 page Ultimate Melbourne Culinary Guide is still on the way." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where are the music and the podcast?",
+          "acceptedAnswer": { "@type": "Answer", "text": "They each have their own page now. Use the Music page and the Podcast page in the menu at the top." }
+        }
+      ]
     }
   ]
 }
@@ -444,12 +559,13 @@ picture{display:contents}
       </div>
       <div class="trio-grid" id="shopGrid">
         <article class="prod reveal" data-cat="book">
-          <a class="cover" href="https://www.amazon.com.au/dp/B0DDHXWC13" target="_blank" rel="noopener" aria-label="Buy The Magical Journey of Kitana and Brandon on Kindle"><picture><source srcset="assets/kitana-brandon-book-cover.webp" type="image/webp"><img src="assets/kitana-brandon-book-cover.jpg" alt="Cover of The Magical Journey of Kitana and Brandon, Book One, by Zaher Neket: an illustrated girl with dark curly hair in front and a boy behind her holding a glowing orb, in a starlit forest with a hanging lantern" width="760" height="1216" decoding="async" loading="lazy"></picture><span class="badge">Children's Book</span></a>
+          <a class="cover" href="https://www.amazon.com.au/dp/B0DDHXWC13" target="_blank" rel="noopener" aria-label="Buy The Magical Journey of Kitana and Brandon on Kindle"><picture><source srcset="assets/kitana-brandon-book-cover.webp" type="image/webp"><img src="assets/kitana-brandon-book-cover.jpg" alt="Cover of The Magical Journey of Kitana and Brandon, Book One, by Zaher Neket: an illustrated girl with dark curly hair in front and a boy behind her holding a glowing orb, in a starlit forest with a hanging lantern" width="760" height="1216" decoding="async" loading="lazy"></picture><span class="badge">Children's Storybook</span></a>
           <div class="p-body">
             <span class="cat">Storybook · Book One</span>
             <h3>The Magical Journey of Kitana and Brandon</h3>
             <p>A magical adventure full of wonder, courage and heart, written to spark imagination in every young reader.</p>
-            <div class="row"><span class="price">A$4.99</span><a class="btn btn-pri btn-sm" href="https://www.amazon.com.au/dp/B0DDHXWC13" target="_blank" rel="noopener">Buy on Kindle</a></div>
+            <div class="row"><span class="price">A$4.99</span><a class="btn btn-pri btn-sm" href="https://www.amazon.com.au/dp/B0DDHXWC13" target="_blank" rel="noopener">Buy on Kindle AU</a></div>
+            <p style="font-size:.82rem;margin:6px 0 0">Amazon Australia price. Amazon US lists it in US dollars.</p>
           </div>
         </article>
         <article class="prod reveal" data-cat="book">
@@ -503,11 +619,11 @@ picture{display:contents}
           </div>
         </article>
         <article class="prod reveal" data-cat="book">
-          <a class="cover" href="#/ebooks" aria-label="See A Blueprint for Happiness on the E-Books page"><picture><source srcset="assets/blueprint-for-happiness-cover.webp" type="image/webp"><img src="assets/blueprint-for-happiness-cover.jpg" alt="Cover of A Blueprint for Happiness, written by Zaher Neket: THE BLUEPRINT TO HAPPINESS in large bold gold letters over bright lush green fields, a winding path through wildflowers toward a golden sunrise, with Written by Zaher Neket in large gold letters at the bottom" width="800" height="1200" decoding="async" loading="lazy"></picture><span class="badge soon">Coming Soon</span></a>
+          <a class="cover" href="#/ebooks" aria-label="See The Blueprint to Happiness on the E-Books page"><picture><source srcset="assets/blueprint-for-happiness-cover.webp" type="image/webp"><img src="assets/blueprint-for-happiness-cover.jpg" alt="Cover of The Blueprint to Happiness, written by Zaher Neket: THE BLUEPRINT TO HAPPINESS in large bold gold letters over bright lush green fields, a winding path through wildflowers toward a golden sunrise, with Written by Zaher Neket in large gold letters at the bottom" width="800" height="1200" decoding="async" loading="lazy"></picture><span class="badge soon">Coming Soon</span></a>
           <div class="p-body">
-            <span class="cat">New Book · On the Way</span>
-            <h3>A Blueprint for Happiness</h3>
-            <p>Happiness is not luck. It is built, one honest choice at a time. A Blueprint for Happiness is Zaher Neket's most personal book yet, a step by step map drawn from real life, real faith and real rebuilding, for anyone who refuses to stay where the hard seasons left them. The book people keep asking for is on its way.</p>
+            <span class="cat">New Book · Coming Soon</span>
+            <h3>The Blueprint to Happiness</h3>
+            <p>Happiness is not luck. It is built, one honest choice at a time. The Blueprint to Happiness is Zaher Neket's most personal book yet, a step by step map drawn from real life, real faith and real rebuilding, for anyone who refuses to stay where the hard seasons left them. The book people keep asking for is on its way.</p>
             <div class="soon-note-row"><span class="soon-note">Coming soon</span><a class="btn btn-ghost btn-sm" href="#/ebooks">See it on E-Books</a></div>
           </div>
         </article>
@@ -521,7 +637,7 @@ picture{display:contents}
       <div class="about-teaser reveal">
         <div>
           <span class="tag" style="color:var(--blue);font-family:'Libre Franklin';font-weight:700;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase">The Story Behind It</span>
-          <h3 style="margin-top:10px">Built by Zaher Neket, from the ground up</h3>
+          <h2 style="margin-top:10px">Built by Zaher Neket, from the ground up</h2>
           <p>The founder's picture, his story, his mission statement and why he created this business now live on their own page, where they belong.</p>
         </div>
         <a class="btn btn-pri" href="#/about">Read the About Page →</a>
@@ -539,8 +655,8 @@ picture{display:contents}
       </div>
       <div class="route-grid">
         <a class="route-card reveal" href="#/ebooks"><picture><source srcset="assets/spiritual-survival-code-cover.webp" type="image/webp"><img src="assets/spiritual-survival-code-cover.jpg" alt="Cover of The Spiritual Survival Code, 11 Principles to Live By, written by Zaher Neket: gold lettering over dark storm clouds with a beam of light breaking through and a ring of symbols across the top" width="760" height="1086" decoding="async" loading="lazy"></picture><div class="rc-body"><h3>E-Books</h3><p>Books and guides in full, with every cover, price and buy link.</p><span class="rc-link">Open the E-Books page →</span></div></a>
-        <a class="route-card reveal" href="#/music"><picture><source srcset="assets/rise-of-the-prophet-ep-cover.webp" type="image/webp"><img src="assets/rise-of-the-prophet-ep-cover.jpg" alt="The Rise of the Prophet EP cover: Zeus The Prophet in a black tank top, sunglasses and a cross necklace, with large golden wings and a glowing halo behind him against fiery orange clouds, with a Parental Advisory Explicit Content label in the corner" width="800" height="800" decoding="async" loading="lazy"></picture><div class="rc-body"><h3>Music</h3><p>The Rise of the Prophet EP — free for the people — and Unity, streaming, by Zeus The Prophet.</p><span class="rc-link">Open the Music page →</span></div></a>
-        <a class="route-card reveal" href="#/podcast"><picture><source srcset="assets/zeus-podcast-cover.webp" type="image/webp"><img src="assets/zeus-podcast-cover.jpg" alt="The Zeus Podcast cover: a golden winged lion with rays of light behind it on a dark cloudy sky, with THE ZEUS PODCAST in gold lettering above and below" width="800" height="800" decoding="async" loading="lazy"></picture><div class="rc-body"><h3>The Podcast</h3><p>The Zeus Podcast, 31 plus episodes of real conversation.</p><span class="rc-link">Open the Podcast page →</span></div></a>
+        <a class="route-card reveal" href="#/music"><picture><source srcset="assets/rise-of-the-prophet-ep-cover.webp" type="image/webp"><img src="assets/rise-of-the-prophet-ep-cover.jpg" alt="The Rise of the Prophet EP cover: Zeus The Prophet in a black tank top, sunglasses and a cross necklace, with large golden wings and a glowing halo behind him against fiery orange clouds, with a Parental Advisory Explicit Content label in the corner" width="800" height="800" decoding="async" loading="lazy"></picture><div class="rc-body"><h3>Music</h3><p>The Rise of the Prophet EP, free for the people, and Unity, streaming, by Zeus The Prophet.</p><span class="rc-link">Open the Music page →</span></div></a>
+        <a class="route-card reveal" href="#/podcast"><picture><source srcset="assets/zeus-podcast-cover.webp" type="image/webp"><img src="assets/zeus-podcast-cover.jpg" alt="The Zeus Podcast cover: a golden winged lion with rays of light behind it on a dark cloudy sky, with THE ZEUS PODCAST in gold lettering above and below" width="800" height="800" decoding="async" loading="lazy"></picture><div class="rc-body"><h3>The Podcast</h3><p>The Zeus Podcast, 31 episodes of real conversation.</p><span class="rc-link">Open the Podcast page →</span></div></a>
         <a class="route-card reveal" href="#/circle"><picture><source srcset="assets/prophets-circle-artwork.webp" type="image/webp"><img src="assets/prophets-circle-artwork.jpg" alt="The Prophet's Circle artwork: six people sitting in a circle around a campfire at sunset, with a glowing cross in the sky above them and a church on a hill in the distance. Text reads Join the Path of Enlightenment and Awakening, The Prophet's Circle, and Seek Wisdom, Find Purpose, Embrace Unity." width="800" height="800" decoding="async" loading="lazy"></picture><div class="rc-body"><h3>The Prophet's Circle</h3><p>The community built through Christ Consciousness.</p><span class="rc-link">Open the Circle page →</span></div></a>
       </div>
     </div>
@@ -551,7 +667,7 @@ picture{display:contents}
     <div class="wrap">
       <div class="sec-head reveal"><span class="tag">Questions</span><h2>Quick answers</h2></div>
       <div class="faq reveal">
-        <details><summary>Where do I buy the books?</summary><div class="a">The Magical Journey of Kitana and Brandon is on Kindle through Amazon Australia for A$4.99, The Spiritual Survival Code is on Gumroad for A$7.99, and The Ultimate Melbourne Travel Guide is on Gumroad as Melbourne Travel Guide for A$14.99. All three are on this page and in full on the E-Books page.</div></details>
+        <details><summary>Where do I buy the books?</summary><div class="a">The Magical Journey of Kitana and Brandon is on Kindle through Amazon Australia for A$4.99. Amazon US lists the same book in US dollars, so the number there is not the same as A$4.99. The Spiritual Survival Code is on Gumroad for A$7.99, and The Ultimate Melbourne Travel Guide is on Gumroad as Melbourne Travel Guide for A$14.99. All three are on this page and in full on the E-Books page.</div></details>
         <details><summary>When are the Melbourne guides out?</summary><div class="a">The Ultimate Melbourne Travel Guide is out now, published live on Gumroad as Melbourne Travel Guide for A$14.99. The 153 page Ultimate Melbourne Culinary Guide is still on the way.</div></details>
         <details><summary>Where are the music and the podcast?</summary><div class="a">They each have their own page now. Use the Music page and the Podcast page in the menu at the top.</div></details>
       </div>
@@ -563,7 +679,7 @@ picture{display:contents}
 <div class="view" id="view-about">
   <section class="page-head"><div class="wrap">
     <a class="backlink" href="#/home">← Back to Home</a>
-    <h2>About <span class="grad-gold">Zaher Neket</span></h2>
+    <h1>About <span class="grad-gold">Zaher Neket</span></h1>
     <p>The man behind I.Quality Online: his picture, his details, his mission, and why he created this business.</p>
   </div></section>
 
@@ -573,7 +689,7 @@ picture{display:contents}
       <span class="tag" style="color:var(--blue);font-family:'Libre Franklin';font-weight:700;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase">The Founder</span>
       <h2 style="margin-top:12px">Zaher Neket, known as Zeus The Prophet</h2>
       <p>Based in <b>Melbourne</b>, Zaher is a man of faith, an artist, an author, and the host of The Zeus Podcast.</p>
-      <p>He hosts <b>The Zeus Podcast</b> as Zeus The Prophet, recording on Riverside and publishing to Spotify, YouTube and TikTok, and he releases music as <b>Zeus The Prophet</b>, including The Rise of the Prophet EP and the single Unity.</p>
+      <p>He hosts <b>The Zeus Podcast</b> as Zeus The Prophet, recording on Riverside and publishing to Spotify, Apple Podcasts and YouTube, and he releases music as <b>Zeus The Prophet</b>, including The Rise of the Prophet EP and the single Unity.</p>
       <p>Everything he creates sits under one umbrella brand: <b>I.Quality Online</b>. Underneath it are The Zeus Podcast, Zeus The Prophet, and The Prophet's Circle.</p>
       <div class="hp-links" style="margin-top:24px">
         <a class="btn btn-pri btn-sm" href="https://zeustheprophet.com/" target="_blank" rel="noopener">zeustheprophet.com</a>
@@ -595,7 +711,7 @@ picture{display:contents}
         <h3 style="margin-top:14px">One home, built from the ground up</h3>
         <p>I created I.Quality Online because everything I make was scattered, the podcast in one place, the music in another, the books somewhere else. I built this business so it all has <b>one clean, professional home</b> under one name.</p>
         <p>I also built it to last. This brand has to work in the real world, so the books, the guides built from this city, and the community around the work can grow into something that stands on its own for years to come.</p>
-        <p>And I built it on faith. <b>The Prophet's Circle</b> is built through Christ Consciousness and the love of Jesus Christ, who is my Lord and Savior first and foremost, and that foundation runs through everything this business puts out.</p>
+        <p>And I built it on faith. <b>The Prophet's Circle</b> is built through Christ Consciousness and the love of Jesus Christ, who is my Lord and Saviour first and foremost, and that foundation runs through everything this business puts out.</p>
       </div>
     </div>
     <div class="values">
@@ -604,7 +720,7 @@ picture{display:contents}
       <div class="value"><b>Family</b><span>Everything here is built to last, and to lift the people it reaches.</span></div>
     </div>
     <div style="margin-top:30px;display:flex;gap:12px;flex-wrap:wrap">
-      <a class="btn btn-pri" href="#/home">Shop the Collection</a>
+      <a class="btn btn-pri" href="#digital-assets">Shop the Collection</a>
       <a class="btn btn-ghost" href="#/podcast">Hear the Podcast</a>
       <a class="btn btn-ghost" href="#/circle">Enter The Prophet's Circle</a>
     </div>
@@ -615,12 +731,12 @@ picture{display:contents}
 <div class="view" id="view-ebooks">
   <section class="page-head"><div class="wrap">
     <a class="backlink" href="#/home">← Back to Home</a>
-    <h2>E-Books and <span class="grad">Guides</span></h2>
+    <h1>E-Books and <span class="grad">Guides</span></h1>
     <p>Every book and guide by Zaher Neket, with its real cover, and its price and buy link shown right next to it wherever it is on sale. Nothing else lives on this page, just the books.</p>
   </div></section>
   <section class="blk" style="padding-top:36px"><div class="wrap">
     <div class="detail-grid">
-      <article class="feat single reveal"><a class="f-img" href="https://www.amazon.com.au/dp/B0DDHXWC13" target="_blank" rel="noopener" aria-label="Buy The Magical Journey of Kitana and Brandon on Kindle"><picture><source srcset="assets/kitana-brandon-book-cover.webp" type="image/webp"><img src="assets/kitana-brandon-book-cover.jpg" alt="Cover of The Magical Journey of Kitana and Brandon, Book One, by Zaher Neket: an illustrated girl with dark curly hair in front and a boy behind her holding a glowing orb, in a starlit forest with a hanging lantern" width="760" height="1216" decoding="async" loading="lazy"></picture></a><div class="f-body"><span class="cat" style="color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-family:"Libre Franklin"">Children's Storybook · Book One</span><h3>The Magical Journey of Kitana and Brandon</h3><p>A magical adventure full of wonder, courage and heart. A storybook written to spark imagination, bravery and a love of reading in young readers everywhere.</p><div class="row" style="display:flex;align-items:center;justify-content:space-between"><span class="price">A$4.99</span><a class="btn btn-pri btn-sm" href="https://www.amazon.com.au/dp/B0DDHXWC13" target="_blank" rel="noopener">Buy on Kindle</a></div></div></article>
+      <article class="feat single reveal"><a class="f-img" href="https://www.amazon.com.au/dp/B0DDHXWC13" target="_blank" rel="noopener" aria-label="Buy The Magical Journey of Kitana and Brandon on Kindle"><picture><source srcset="assets/kitana-brandon-book-cover.webp" type="image/webp"><img src="assets/kitana-brandon-book-cover.jpg" alt="Cover of The Magical Journey of Kitana and Brandon, Book One, by Zaher Neket: an illustrated girl with dark curly hair in front and a boy behind her holding a glowing orb, in a starlit forest with a hanging lantern" width="760" height="1216" decoding="async" loading="lazy"></picture></a><div class="f-body"><span class="cat" style="color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-family:"Libre Franklin"">Children's Storybook · Book One</span><h3>The Magical Journey of Kitana and Brandon</h3><p>A magical adventure full of wonder, courage and heart. A storybook written to spark imagination, bravery and a love of reading in young readers everywhere.</p><div class="row" style="display:flex;align-items:center;justify-content:space-between"><span class="price">A$4.99</span><a class="btn btn-pri btn-sm" href="https://www.amazon.com.au/dp/B0DDHXWC13" target="_blank" rel="noopener">Buy on Kindle AU</a></div><p style="font-size:.82rem;margin:6px 0 0">Amazon Australia price. Amazon US lists it in US dollars.</p></div></article>
       <article class="feat single reveal"><a class="f-img" href="https://zaherneck.gumroad.com/l/jnlnql" target="_blank" rel="noopener" aria-label="Buy The Spiritual Survival Code on Gumroad"><picture><source srcset="assets/spiritual-survival-code-cover.webp" type="image/webp"><img src="assets/spiritual-survival-code-cover.jpg" alt="Cover of The Spiritual Survival Code, 11 Principles to Live By, written by Zaher Neket: gold lettering over dark storm clouds with a beam of light breaking through and a ring of symbols across the top" width="760" height="1086" decoding="async" loading="lazy"></picture></a><div class="f-body"><span class="cat" style="color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-family:"Libre Franklin"">E-Book · 11 Principles</span><h3>The Spiritual Survival Code</h3><p>Eleven principles to live by, written from real life, real faith and real recovery. Published on Gumroad on 20 November 2026, written by Zaher Neket.</p><div class="row" style="display:flex;align-items:center;justify-content:space-between"><span class="price">A$7.99</span><a class="btn btn-pri btn-sm" href="https://zaherneck.gumroad.com/l/jnlnql" target="_blank" rel="noopener">Buy on Gumroad</a></div></div></article>
       <article class="feat single reveal"><a class="f-img travel-cover" href="https://zaherneck.gumroad.com/l/owmzj" target="_blank" rel="noopener" aria-label="Buy The Ultimate Melbourne Travel Guide on Gumroad"><picture><source srcset="assets/melbourne-travel-guide-cover.webp" type="image/webp"><img src="assets/melbourne-travel-guide-cover.jpg" alt="Cover of The Ultimate Melbourne Travel Guide showing the Melbourne skyline at dusk, bright yellow Bangers title, the I.Quality Online eagle in the river and Written by ZAHER NEKET at the bottom" width="1200" height="836" decoding="async" loading="lazy"></picture></a><div class="f-body"><span class="cat" style="color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-family:"Libre Franklin"">Travel Guide</span><h3>The Ultimate Melbourne Travel Guide</h3><p>Melbourne through the eyes of a local who loves this city, the places, the food and the hidden corners most visitors never find. Published live on Gumroad as Melbourne Travel Guide.</p><div class="row" style="display:flex;align-items:center;justify-content:space-between"><span class="price">A$14.99</span><a class="btn btn-pri btn-sm" href="https://zaherneck.gumroad.com/l/owmzj" target="_blank" rel="noopener">Buy Now</a></div></div></article>
     </div>
@@ -633,7 +749,7 @@ picture{display:contents}
       <div class="detail-grid">
         <article class="feat single reveal"><div class="f-img"><picture><source srcset="assets/melbourne-culinary-guide-cover.webp" type="image/webp"><img src="assets/melbourne-culinary-guide-cover.jpg" alt="Cover of The Ultimate Melbourne Culinary Guide: the title in black and blue over a white table with spring rolls, dumplings, chillies and herbs around the edges, and the gold I.Quality Online eagle logo in the centre" width="760" height="1075" decoding="async" loading="lazy"></picture></div><div class="f-body"><span class="cat" style="color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-family:"Libre Franklin"">Food Guide · 153 Pages · Coming Soon</span><h3>The Ultimate Melbourne Culinary Guide</h3><p>153 pages of pure Melbourne flavour. The hidden laneway kitchens, the legendary family tables, the dumplings worth crossing the city for, and the road trips built around one perfect meal, from Phillip Island and the Great Ocean Road to Peninsula Hot Springs, Puffing Billy and Healesville. Built with the venues themselves, this is not just a list of places to eat. It is a love letter to a city that eats like nowhere else on earth, and it is coming soon.</p><div class="row"><span class="soon-note">Coming soon</span></div></div></article>
         <article class="feat single reveal"><div class="f-img"><picture><source srcset="assets/kitana-golden-timeline-cover.webp" type="image/webp"><img src="assets/kitana-golden-timeline-cover.jpg" alt="Cover of The Extraordinary Adventures of Kitana and Brandon, The Golden Timeline, written by Zaher Neket: Kitana in a teal dress and Brandon with a backpack holding glowing leaves with a small orange dragon between them, in front of pyramids at sunset with Egyptian figures carrying stone blocks" width="832" height="1248" decoding="async" loading="lazy"></picture></div><div class="f-body"><span class="cat" style="color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-family:"Libre Franklin"">Children's Storybook · Coming Soon</span><h3>The Extraordinary Adventures of Kitana and Brandon</h3><p>The Golden Timeline. Kitana and Brandon step into ancient Egypt, where glowing leaves, a little dragon and a golden timeline lead them on their next big adventure. Wonder, courage and heart, for every young reader. Written by Zaher Neket, and it is on the way.</p><div class="row"><span class="soon-note">Coming soon</span></div></div></article>
-        <article class="feat single reveal"><div class="f-img"><picture><source srcset="assets/blueprint-for-happiness-cover.webp" type="image/webp"><img src="assets/blueprint-for-happiness-cover.jpg" alt="Cover of A Blueprint for Happiness, written by Zaher Neket: THE BLUEPRINT TO HAPPINESS in large bold gold letters over bright lush green fields, a winding path through wildflowers toward a golden sunrise, with Written by Zaher Neket in large gold letters at the bottom" width="800" height="1200" decoding="async" loading="lazy"></picture></div><div class="f-body"><span class="cat" style="color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-family:"Libre Franklin"">New Book · Coming Soon</span><h3>A Blueprint for Happiness</h3><p>Happiness is not luck. It is built, one honest choice at a time. A Blueprint for Happiness is Zaher Neket's most personal book yet, a step by step map drawn from real life, real faith and real rebuilding, for anyone who refuses to stay where the hard seasons left them. No empty motivation, just the blueprint: how to think, how to heal, and how to build a life that feels good to wake up in. It is on the way, and it will be worth the wait.</p><div class="row"><span class="soon-note">Coming soon</span></div></div></article>
+        <article class="feat single reveal"><div class="f-img"><picture><source srcset="assets/blueprint-for-happiness-cover.webp" type="image/webp"><img src="assets/blueprint-for-happiness-cover.jpg" alt="Cover of The Blueprint to Happiness, written by Zaher Neket: THE BLUEPRINT TO HAPPINESS in large bold gold letters over bright lush green fields, a winding path through wildflowers toward a golden sunrise, with Written by Zaher Neket in large gold letters at the bottom" width="800" height="1200" decoding="async" loading="lazy"></picture></div><div class="f-body"><span class="cat" style="color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-family:"Libre Franklin"">New Book · Coming Soon</span><h3>The Blueprint to Happiness</h3><p>Happiness is not luck. It is built, one honest choice at a time. The Blueprint to Happiness is Zaher Neket's most personal book yet, a step by step map drawn from real life, real faith and real rebuilding, for anyone who refuses to stay where the hard seasons left them. No empty motivation, just the blueprint: how to think, how to heal, and how to build a life that feels good to wake up in. It is on the way, and it will be worth the wait.</p><div class="row"><span class="soon-note">Coming soon</span></div></div></article>
       </div>
     </div>
   </div></section>
@@ -643,14 +759,14 @@ picture{display:contents}
 <div class="view" id="view-music">
   <section class="page-head"><div class="wrap">
     <a class="backlink" href="#/home">← Back to Home</a>
-    <h2>Zeus The Prophet <span class="grad">Music</span></h2>
+    <h1>Zeus The Prophet <span class="grad">Music</span></h1>
     <p>Melbourne hip hop with a message. This is the dedicated music page, separate from the front page and the podcast.</p>
   </div></section>
   <section class="blk" style="padding-top:36px"><div class="wrap">
     <div class="detail-grid">
-      <article class="feat reveal"><div class="f-covers"><a href="https://open.spotify.com/album/1mZxUo0ZcYoWHd3pQpCNiK" target="_blank" rel="noopener" aria-label="The Rise of the Prophet EP on Spotify"><picture><source srcset="assets/rise-of-the-prophet-ep-cover.webp" type="image/webp"><img src="assets/rise-of-the-prophet-ep-cover.jpg" alt="The Rise of the Prophet EP cover: Zeus The Prophet in a black tank top, sunglasses and a cross necklace, with large golden wings and a glowing halo behind him against fiery orange clouds, with a Parental Advisory Explicit Content label in the corner" width="800" height="800" decoding="async" loading="lazy"></picture></a><a href="https://open.spotify.com/artist/5orsEGpptFpSh7wBzyQkyI" target="_blank" rel="noopener" aria-label="Unity by Zeus The Prophet on Spotify"><picture><source srcset="assets/unity-single-cover.webp" type="image/webp"><img src="assets/unity-single-cover.jpg" alt="Unity single cover by Zeus The Prophet featuring NJE and Mez: Zeus in a colourful patterned hood looking up at beams of golden and blue light, with a crowd, graffiti walls, turntables and a boombox around him, and UNITY in large graffiti lettering" width="800" height="800" decoding="async" loading="lazy"></picture></a></div>
-      <div class="f-body"><h3>The Rise of the Prophet EP and Unity</h3><p>The Rise of the Prophet EP is free for the people, not for sale, just press play and listen. It carries Free Palestine as track 4, part of the EP only. Unity went live on 18 September, featuring NJE and Mez.</p><ul class="tracklist"><li><span><b>The Rise of the Prophet EP</b> · CD Baby</span><span style="font-family:'Libre Franklin';font-weight:800;color:var(--gold)">Free for the people</span></li><li><span><b>Unity</b> · with NJE and Mez</span><span>Single · Streaming</span></li><li><span><b>Free Palestine</b> · track 4 of the EP</span><span>Included in the EP</span></li></ul><div class="row" style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:20px"><span style="font-family:'Libre Franklin';font-weight:800;font-size:1.15rem;color:var(--gold)">Free for the people <small style="color:var(--faint);font-weight:600;font-size:.8rem">· The Rise of the Prophet EP, not for sale, just listen</small></span><span style="color:var(--muted);font-size:.92rem">Unity is streaming only, not sold as a download</span></div><div class="hp-links"><a class="btn btn-pri btn-sm" href="https://open.spotify.com/artist/5orsEGpptFpSh7wBzyQkyI" target="_blank" rel="noopener">Listen on Spotify</a><a class="btn btn-ghost btn-sm" href="https://music.apple.com/au/artist/zeus-the-prophet/1573601282" target="_blank" rel="noopener">Apple Music</a><a class="btn btn-ghost btn-sm" href="https://www.youtube.com/@zeustheprophet" target="_blank" rel="noopener">YouTube</a></div></div></article>
-      <article class="feat single reveal"><a class="f-img" href="https://open.spotify.com/artist/5orsEGpptFpSh7wBzyQkyI" target="_blank" rel="noopener" aria-label="Unity by Zeus The Prophet on Spotify"><picture><source srcset="assets/unity-single-cover.webp" type="image/webp"><img src="assets/unity-single-cover.jpg" alt="Unity single cover by Zeus The Prophet featuring NJE and Mez: Zeus in a colourful patterned hood looking up at beams of golden and blue light, with a crowd, graffiti walls, turntables and a boombox around him, and UNITY in large graffiti lettering" width="800" height="800" decoding="async" loading="lazy"></picture></a><div class="f-body"><h3>Unity</h3><p>The single that landed on 18 September. One message, one people, standing together. Stream it on Spotify and Apple Music, and follow Zeus The Prophet for what comes next.</p><div class="row" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px"><span class="soon-note" style="color:var(--muted)">Streaming only — not sold as a download</span></div><div class="hp-links"><a class="btn btn-pri btn-sm" href="https://open.spotify.com/artist/5orsEGpptFpSh7wBzyQkyI" target="_blank" rel="noopener">Spotify Artist</a><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/zeustheprophet/" target="_blank" rel="noopener">@zeustheprophet</a></div></div></article>
+      <article class="feat reveal"><div class="f-covers"><a href="https://open.spotify.com/album/1mZxUo0ZcYoWHd3pQpCNiK" target="_blank" rel="noopener" aria-label="The Rise of the Prophet EP on Spotify"><picture><source srcset="assets/rise-of-the-prophet-ep-cover.webp" type="image/webp"><img src="assets/rise-of-the-prophet-ep-cover.jpg" alt="The Rise of the Prophet EP cover: Zeus The Prophet in a black tank top, sunglasses and a cross necklace, with large golden wings and a glowing halo behind him against fiery orange clouds, with a Parental Advisory Explicit Content label in the corner" width="800" height="800" decoding="async" loading="lazy"></picture></a><a href="https://open.spotify.com/track/1Qcfpe9oQYCFHhVAMa1RMJ" target="_blank" rel="noopener" aria-label="Unity by Zeus The Prophet on Spotify"><picture><source srcset="assets/unity-single-cover.webp" type="image/webp"><img src="assets/unity-single-cover.jpg" alt="Unity single cover by Zeus The Prophet featuring NJE and Mez: Zeus in a colourful patterned hood looking up at beams of golden and blue light, with a crowd, graffiti walls, turntables and a boombox around him, and UNITY in large graffiti lettering" width="800" height="800" decoding="async" loading="lazy"></picture></a></div>
+      <div class="f-body"><h3>The Rise of the Prophet EP and Unity</h3><p>The Rise of the Prophet EP is free for the people, not for sale, just press play and listen. It carries Free Palestine as track 4, part of the EP only. Unity went live on 18 September 2026, featuring NJE and Mez.</p><ul class="tracklist"><li><span><b>The Rise of the Prophet EP</b> · CD Baby</span><span style="font-family:'Libre Franklin';font-weight:800;color:var(--gold)">Free for the people</span></li><li><span><b>Unity</b> · with NJE and Mez</span><span>Single · Streaming</span></li><li><span><b>Free Palestine</b> · track 4 of the EP</span><span>Included in the EP</span></li></ul><div class="row" style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:20px"><span style="font-family:'Libre Franklin';font-weight:800;font-size:1.15rem;color:var(--gold)">Free for the people <small style="color:var(--faint);font-weight:600;font-size:.8rem">· The Rise of the Prophet EP, not for sale, just listen</small></span><span style="color:var(--muted);font-size:.92rem">Unity is streaming only, not sold as a download</span></div><div class="hp-links"><a class="btn btn-pri btn-sm" href="https://open.spotify.com/artist/5orsEGpptFpSh7wBzyQkyI" target="_blank" rel="noopener">Listen on Spotify</a><a class="btn btn-ghost btn-sm" href="https://music.apple.com/au/artist/zeus-the-prophet/1573601282" target="_blank" rel="noopener">Apple Music</a><a class="btn btn-ghost btn-sm" href="https://www.youtube.com/@zeustheprophet" target="_blank" rel="noopener">YouTube</a></div></div></article>
+      <article class="feat single reveal"><a class="f-img" href="https://open.spotify.com/track/1Qcfpe9oQYCFHhVAMa1RMJ" target="_blank" rel="noopener" aria-label="Unity by Zeus The Prophet on Spotify"><picture><source srcset="assets/unity-single-cover.webp" type="image/webp"><img src="assets/unity-single-cover.jpg" alt="Unity single cover by Zeus The Prophet featuring NJE and Mez: Zeus in a colourful patterned hood looking up at beams of golden and blue light, with a crowd, graffiti walls, turntables and a boombox around him, and UNITY in large graffiti lettering" width="800" height="800" decoding="async" loading="lazy"></picture></a><div class="f-body"><h3>Unity</h3><p>The single that landed on 18 September 2026. One message, one people, standing together. Stream it on Spotify and Apple Music, and follow Zeus The Prophet for what comes next.</p><div class="row" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px"><span class="soon-note" style="color:var(--muted)">Streaming only, not sold as a download</span></div><div class="hp-links"><a class="btn btn-pri btn-sm" href="https://open.spotify.com/artist/5orsEGpptFpSh7wBzyQkyI" target="_blank" rel="noopener">Spotify Artist</a><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/zeustheprophet/" target="_blank" rel="noopener">@zeustheprophet</a></div></div></article>
     </div>
   </div></section>
 </div><!-- /view-music -->
@@ -659,12 +775,12 @@ picture{display:contents}
 <div class="view" id="view-podcast">
   <section class="page-head"><div class="wrap">
     <a class="backlink" href="#/home">← Back to Home</a>
-    <h2>The Zeus <span class="grad">Podcast</span></h2>
+    <h1>The Zeus <span class="grad">Podcast</span></h1>
     <p>Real conversations with artists, thinkers and everyday people with a story worth hearing. Hosted by Zaher Neket as Zeus The Prophet, recorded on Riverside from Melbourne.</p>
   </div></section>
   <section class="blk" style="padding-top:36px"><div class="wrap">
     <div class="detail-grid">
-      <article class="feat single reveal"><a class="f-img" href="https://open.spotify.com/show/2GhCPrS6n4L3o1JjZVriK3" target="_blank" rel="noopener" aria-label="The Zeus Podcast on Spotify"><picture><source srcset="assets/zeus-podcast-cover.webp" type="image/webp"><img src="assets/zeus-podcast-cover.jpg" alt="The Zeus Podcast cover: a golden winged lion with rays of light behind it on a dark cloudy sky, with THE ZEUS PODCAST in gold lettering above and below" width="800" height="800" decoding="async" loading="lazy"></picture></a><div class="f-body"><h3>Listen and watch</h3><p>31 plus episodes and counting. New episodes land every week on Spotify, Apple Podcasts and YouTube on The Zeus Podcast Network.</p><div class="hp-links"><a class="btn btn-pri btn-sm" href="https://open.spotify.com/show/2GhCPrS6n4L3o1JjZVriK3" target="_blank" rel="noopener">Listen on Spotify</a><a class="btn btn-ghost btn-sm" href="https://www.youtube.com/@TheZeusPodcastNetwork" target="_blank" rel="noopener">Watch on YouTube</a><a class="btn btn-ghost btn-sm" href="https://podcasts.apple.com/au/podcast/the-zeus-podcast/id1870829275" target="_blank" rel="noopener">Apple Podcasts</a></div></div></article>
+      <article class="feat single reveal"><a class="f-img" href="https://open.spotify.com/show/2GhCPrS6n4L3o1JjZVriK3" target="_blank" rel="noopener" aria-label="The Zeus Podcast on Spotify"><picture><source srcset="assets/zeus-podcast-cover.webp" type="image/webp"><img src="assets/zeus-podcast-cover.jpg" alt="The Zeus Podcast cover: a golden winged lion with rays of light behind it on a dark cloudy sky, with THE ZEUS PODCAST in gold lettering above and below" width="800" height="800" decoding="async" loading="lazy"></picture></a><div class="f-body"><h3>Listen and watch</h3><p>31 episodes and counting. New episodes land on Spotify, Apple Podcasts and YouTube on The Zeus Podcast Network.</p><p style="margin-top:10px">Hear the music behind the show at <a href="https://zeustheprophet.com/" target="_blank" rel="noopener">zeustheprophet.com</a>, the home of Zeus The Prophet.</p><div class="hp-links"><a class="btn btn-pri btn-sm" href="https://open.spotify.com/show/2GhCPrS6n4L3o1JjZVriK3" target="_blank" rel="noopener">Listen on Spotify</a><a class="btn btn-ghost btn-sm" href="https://www.youtube.com/@TheZeusPodcastNetwork" target="_blank" rel="noopener">Watch on YouTube</a><a class="btn btn-ghost btn-sm" href="https://podcasts.apple.com/au/podcast/the-zeus-podcast/id1870829275" target="_blank" rel="noopener">Apple Podcasts</a></div></div></article>
       <article class="feat single reveal"><a class="f-img" href="https://open.spotify.com/show/2GhCPrS6n4L3o1JjZVriK3" target="_blank" rel="noopener" aria-label="The Zeus Podcast on Spotify"><picture><source srcset="assets/zeus-podcast-cover.webp" type="image/webp"><img src="assets/zeus-podcast-cover.jpg" alt="The Zeus Podcast cover: a golden winged lion with rays of light behind it on a dark cloudy sky, with THE ZEUS PODCAST in gold lettering above and below" width="800" height="800" decoding="async" loading="lazy"></picture></a><div class="f-body"><h3>Most loved episode</h3><p>Episode 25, the Eagle Whisperer episode, is the most loved episode so far, opening with a bold myth bust, a real expert and a striking animal on screen. Start there, then work through the catalogue.</p><div class="hp-links"><a class="btn btn-pri btn-sm" href="https://www.instagram.com/theofficialzeuspodcast/" target="_blank" rel="noopener">Podcast on Instagram</a><a class="btn btn-ghost btn-sm" href="https://open.spotify.com/show/2GhCPrS6n4L3o1JjZVriK3" target="_blank" rel="noopener">All episodes on Spotify</a></div></div></article>
     </div>
   </div></section>
@@ -674,18 +790,18 @@ picture{display:contents}
 <div class="view" id="view-circle">
   <section class="page-head"><div class="wrap">
     <a class="backlink" href="#/home">← Back to Home</a>
-    <h2>The Prophet's <span class="grad">Circle</span></h2>
+    <h1>The Prophet's <span class="grad">Circle</span></h1>
     <p>The community at the heart of I.Quality Online, on its own page.</p>
   </div></section>
   <section class="blk" style="padding-top:36px"><div class="wrap">
     <div class="circle-band reveal">
-      <a class="cb-img" href="#waitlist" aria-label="Join the waitlist for The Prophet's Circle"><picture><source srcset="assets/prophets-circle-artwork.webp" type="image/webp"><img src="assets/prophets-circle-artwork.jpg" alt="The Prophet's Circle artwork: six people sitting in a circle around a campfire at sunset, with a glowing cross in the sky above them and a church on a hill in the distance. Text reads Join the Path of Enlightenment and Awakening, The Prophet's Circle, and Seek Wisdom, Find Purpose, Embrace Unity." width="800" height="800" decoding="async" loading="lazy"></picture></a>
+      <a class="cb-img" href="https://www.instagram.com/theprophetscircle/" target="_blank" rel="noopener" aria-label="Follow The Prophet's Circle on Instagram"><picture><source srcset="assets/prophets-circle-artwork.webp" type="image/webp"><img src="assets/prophets-circle-artwork.jpg" alt="The Prophet's Circle artwork: six people sitting in a circle around a campfire at sunset, with a glowing cross in the sky above them and a church on a hill in the distance. Text reads Join the Path of Enlightenment and Awakening, The Prophet's Circle, and Seek Wisdom, Find Purpose, Embrace Unity." width="800" height="800" decoding="async" loading="lazy"></picture></a>
       <div class="cb-body">
         <span class="tag" style="color:var(--blue);font-family:"Libre Franklin";font-weight:700;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase">Community</span>
         <h3>Built through Christ Consciousness</h3>
-        <p>The Prophet's Circle is the community around Zeus The Prophet, built through Christ Consciousness and the love of Jesus Christ, who is Zaher's Lord and Savior first and foremost. A place to belong, grow and walk the journey together.</p>
+        <p>The Prophet's Circle is the community around Zeus The Prophet, built through Christ Consciousness and the love of Jesus Christ, who is Zaher's Lord and Saviour first and foremost. A place to belong, grow and walk the journey together.</p>
         <p style="color:var(--muted);margin:0 0 22px">Follow along as the Circle grows, and step in through Instagram.</p>
-        <div class="hp-links"><a class="btn btn-pri btn-sm" href="#waitlist">Join the Waitlist</a><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/theprophetscircle/" target="_blank" rel="noopener">Follow the Circle on Instagram</a><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/theofficialzeuspodcast/" target="_blank" rel="noopener">The Zeus Podcast</a></div>
+        <div class="hp-links"><a class="btn btn-pri btn-sm" href="https://www.instagram.com/theprophetscircle/" target="_blank" rel="noopener">Join the Circle, free on Instagram</a><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/theofficialzeuspodcast/" target="_blank" rel="noopener">The Zeus Podcast</a></div>
       </div>
     </div>
     <div class="values" style="margin-top:22px">
@@ -693,40 +809,11 @@ picture{display:contents}
       <div class="value"><b>Grow</b><span>Faith, truth and getting better than yesterday, together.</span></div>
       <div class="value"><b>Walk together</b><span>Built on the love of Jesus Christ, first and foremost.</span></div>
     </div>
-    <div id="waitlist" style="margin-top:34px;padding:28px;border:1px solid var(--line2);border-radius:var(--r);background:var(--panel)">
-      <span class="tag" style="color:var(--gold);font-family:'Libre Franklin';font-weight:800;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase">Join the Waitlist</span>
-      <h3 style="margin:10px 0 8px">Step inside the Circle. This is a brotherhood, not a mailing list.</h3>
-      <p style="color:var(--muted);margin:0 0 20px">Real people, real faith, real growth, walking together through Christ Consciousness. Spots are limited, and the door opens to the waitlist first. Put your name down now and be first in when the Circle opens.</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 22px">
-        <div style="padding:20px;border:1px solid var(--line2);border-radius:var(--r);background:var(--bg2)">
-          <b style="font-family:'Libre Franklin';font-size:1.05rem">Join the Waitlist, free</b>
-          <p style="color:var(--muted);margin:8px 0 14px">Get in line and be first to hear when the Circle opens. No charge, just your name down.</p>
-          <a class="btn btn-ghost btn-sm" href="#circle-waitlist">Join the Waitlist</a>
-        </div>
-        <div style="padding:20px;border:1px solid var(--gold);border-radius:var(--r);background:var(--bg2)">
-          <b style="font-family:'Libre Franklin';font-size:1.05rem">Go Premium, $29.99 AUD, skip the line</b>
-          <p style="color:var(--muted);margin:8px 0 14px">Instant entry into the Circle, plus a 30 minute WhatsApp or Zoom call with Zaher to answer your questions. Limited spots, once they are gone they are gone.</p>
-          <a class="btn btn-pri btn-sm" href="https://zaherneck.gumroad.com/l/wbsxgq" target="_blank" rel="noopener">Join Premium Now, $29.99 AUD</a>
-        </div>
-      </div>
-      <form id="circle-waitlist" style="display:grid;gap:12px;max-width:520px">
-        <label style="display:grid;gap:6px;font-weight:700">Your name<input required name="name" type="text" autocomplete="name" placeholder="Your full name" style="padding:12px 14px;border-radius:10px;border:1px solid var(--line2);background:var(--bg2);color:var(--ink);font-size:1rem" /></label>
-        <label style="display:grid;gap:6px;font-weight:700">Phone number<input required name="phone" type="tel" autocomplete="tel" placeholder="Your phone number" style="padding:12px 14px;border-radius:10px;border:1px solid var(--line2);background:var(--bg2);color:var(--ink);font-size:1rem" /></label>
-        <label style="display:grid;gap:6px;font-weight:700">Email address<input required name="email" type="email" autocomplete="email" placeholder="Your email address" style="padding:12px 14px;border-radius:10px;border:1px solid var(--line2);background:var(--bg2);color:var(--ink);font-size:1rem" /></label>
-        <label style="display:grid;gap:6px;font-weight:700">Why do you want in? <span style="font-weight:400;color:var(--muted)">(optional)</span><textarea name="why" rows="3" placeholder="Tell us in a line or two" style="padding:12px 14px;border-radius:10px;border:1px solid var(--line2);background:var(--bg2);color:var(--ink);font-size:1rem"></textarea></label>
-        <button class="btn btn-pri" type="submit" style="justify-self:start">Join the Waitlist</button>
-        <p id="waitlist-done" style="display:none;color:var(--gold);font-weight:700;margin:0">You are on the list, brother. Welcome to the Circle. Keep an eye on your inbox.</p>
-      </form>
-      <script>
-      document.getElementById('circle-waitlist').addEventListener('submit', function(e){
-        e.preventDefault();
-        var f = e.target;
-        var body = 'Name: ' + f.name.value + '%0D%0A' + 'Phone: ' + f.phone.value + '%0D%0A' + 'Email: ' + f.email.value + '%0D%0A' + 'Why: ' + (f.why.value || '');
-        window.location.href = 'mailto:admin@iqualityonline.com?subject=' + encodeURIComponent("The Prophet's Circle waitlist: " + f.name.value) + '&body=' + body;
-        document.getElementById('waitlist-done').style.display = 'block';
-        f.reset();
-      });
-      </script>
+    <div style="margin-top:34px;padding:28px;border:1px solid var(--line2);border-radius:var(--r);background:var(--panel)">
+      <span class="tag" style="color:var(--gold);font-family:'Libre Franklin';font-weight:800;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase">Free to Join</span>
+      <h3 style="margin:10px 0 8px">Step inside the Circle. A community, not a mailing list.</h3>
+      <p style="color:var(--muted);margin:0 0 20px">Real people, real faith, real growth, walking together through Christ Consciousness. The Prophet's Circle is free, there is no charge to join. Step in through Instagram.</p>
+      <div class="hp-links"><a class="btn btn-pri btn-sm" href="https://www.instagram.com/theprophetscircle/" target="_blank" rel="noopener">Join the Circle, free on Instagram</a></div>
     </div>
   </div></section>
 </div><!-- /view-circle -->
@@ -755,6 +842,7 @@ picture{display:contents}
         <h4>Connect</h4>
         <a href="https://www.instagram.com/zeustheprophet/" target="_blank" rel="noopener">Instagram · @zeustheprophet</a>
         <a href="https://www.instagram.com/theofficialzeuspodcast/" target="_blank" rel="noopener">Instagram · Podcast</a>
+        <a href="https://www.instagram.com/theprophetscircle/" target="_blank" rel="noopener">Instagram · The Prophet's Circle</a>
         <a href="https://x.com/zeustheprophet" target="_blank" rel="noopener">X · @zeustheprophet</a>
         <a href="https://linkedin.com/in/zaherneket" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://zeustheprophet.com/" target="_blank" rel="noopener">zeustheprophet.com</a>
@@ -797,8 +885,30 @@ picture{display:contents}
     var h=(location.hash||"").replace(/^#\/?/,"").split("?")[0];
     return viewNames.indexOf(h)>-1 ? h : "home";
   }
+  /* Per-route SEO: update title and meta description as the hash route
+     changes. Google ignores URL fragments, so it indexes this file as one
+     page (the home title/description above); this keeps tab titles, social
+     previews for JS-aware scrapers, and the user-facing title correct per
+     view. Canonical stays https://iqualityonline.com/ for every route. */
+  var ROUTE_META={
+    home:{title:"I.Quality Online | The Zeus Podcast, Books, Guides and Music",desc:"The Melbourne home of The Zeus Podcast, books and guides by Zaher Neket, known as Zeus The Prophet, plus his music and The Prophet's Circle, a free community."},
+    about:{title:"About Zaher Neket | Zeus The Prophet | I.Quality Online",desc:"Meet Zaher Neket, known as Zeus The Prophet: Melbourne author, musician and host of The Zeus Podcast, and founder of I.Quality Online."},
+    ebooks:{title:"E-Books and Melbourne Guides by Zaher Neket | I.Quality Online",desc:"Every book and guide by Zaher Neket: The Spiritual Survival Code, The Ultimate Melbourne Travel Guide, the Culinary Guide, and the children's storybooks."},
+    music:{title:"Zeus The Prophet Music | The Rise of the Prophet EP and Unity",desc:"Melbourne hip hop with a message: The Rise of the Prophet EP, free for the people, and the single Unity with NJE and Mez, by Zeus The Prophet."},
+    podcast:{title:"The Zeus Podcast | 31 Episodes | Zaher Neket, Melbourne",desc:"The Zeus Podcast: 31 episodes of real conversation with artists, thinkers and everyday people, hosted by Zaher Neket as Zeus The Prophet."},
+    circle:{title:"The Prophet's Circle | Free Community | I.Quality Online",desc:"The Prophet's Circle is a free community built through Christ Consciousness and the love of Jesus Christ. Join free on Instagram."}
+  };
+  function setRouteMeta(r){
+    var m=ROUTE_META[r]||ROUTE_META.home;
+    document.title=m.title;
+    var d=document.getElementById("metaDescription"); if(d) d.setAttribute("content",m.desc);
+    var pairs=[["ogTitle",m.title],["ogDescription",m.desc],["twitterTitle",m.title],["twitterDescription",m.desc]];
+    pairs.forEach(function(pr){ var el=document.getElementById(pr[0]); if(el) el.setAttribute("content",pr[1]); });
+  }
   function showRoute(){
+    if((location.hash||"")==="#top"){ window.scrollTo(0,0); return; }
     var r=currentRoute();
+    setRouteMeta(r);
     viewNames.forEach(function(n){
       var v=document.getElementById("view-"+n);
       if(v) v.classList.toggle("active", n===r);
@@ -809,6 +919,14 @@ picture{display:contents}
   }
   window.addEventListener("hashchange", showRoute);
   showRoute();
+  // #top is the skip link target, not a route: scroll to top without
+  // switching the view back to Home.
+  document.querySelectorAll('a[href="#top"]').forEach(function(a){
+    a.addEventListener("click", function(e){
+      e.preventDefault();
+      window.scrollTo({top:0, behavior: reduced?"auto":"smooth"});
+    });
+  });
   // in-page anchors on home (digital assets / about) need home view first
   document.querySelectorAll('a[href="#digital-assets"]').forEach(function(a){
     a.addEventListener("click", function(e){

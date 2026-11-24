@@ -1,39 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- Single-file SPA: Google ignores URL fragments, so hash routes
+     must NOT appear here. They are not separate URLs and listing them
+     wastes crawl budget and can be dropped by Google. The whole site
+     is one URL. Image entries below list the covers that live on it. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://iqualityonline.com/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://iqualityonline.com/#/ebooks</loc>
-    <lastmod>2026-11-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://iqualityonline.com/#/music</loc>
-    <lastmod>2026-11-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://iqualityonline.com/#/podcast</loc>
-    <lastmod>2026-11-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://iqualityonline.com/#/circle</loc>
-    <lastmod>2026-11-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://iqualityonline.com/#/about</loc>
-    <lastmod>2026-11-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://iqualityonline.com/assets/logo-iq-online.jpg</image:loc>
+      <image:title>I.Quality Online logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://iqualityonline.com/assets/kitana-brandon-book-cover.jpg</image:loc>
+      <image:title>The Magical Journey of Kitana and Brandon cover</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://iqualityonline.com/assets/spiritual-survival-code-cover.jpg</image:loc>
+      <image:title>The Spiritual Survival Code cover</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://iqualityonline.com/assets/melbourne-travel-guide-cover.jpg</image:loc>
+      <image:title>The Ultimate Melbourne Travel Guide cover</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://iqualityonline.com/assets/zeus-podcast-cover.jpg</image:loc>
+      <image:title>The Zeus Podcast cover</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://iqualityonline.com/assets/rise-of-the-prophet-ep-cover.jpg</image:loc>
+      <image:title>The Rise of the Prophet EP cover</image:title>
+    </image:image>
   </url>
 </urlset>
