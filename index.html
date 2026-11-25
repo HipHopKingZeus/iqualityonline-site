@@ -143,7 +143,7 @@ nav.main a:hover,nav.main a.active{color:var(--ink);background:var(--panel2)}
 .pill{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line2);background:var(--panel);color:var(--muted);font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:8px 15px;border-radius:999px}
 .pill i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan);animation:pulse 2.2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-.hero h1{font-size:clamp(2.5rem,5.6vw,4.3rem);font-weight:800;letter-spacing:-.015em;margin:22px 0 8px}
+.hero h1{font-size:clamp(3.2rem,7vw,5.4rem);font-weight:800;letter-spacing:-.015em;margin:22px 0 8px}
 .hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .sub{font-family:"Libre Franklin";font-size:clamp(1.05rem,2vw,1.3rem);color:var(--ink);font-weight:600;margin:0 0 14px}
 .hero p.lede{color:var(--muted);max-width:34rem;margin:0 0 30px;font-size:1.06rem}
@@ -160,13 +160,16 @@ nav.main a:hover,nav.main a.active{color:var(--ink);background:var(--panel2)}
 .mq-track{display:flex;gap:0;width:max-content;animation:mq 30s linear infinite}
 .mq-track span{font-family:"Libre Franklin";font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:.85rem;color:var(--faint);padding:0 26px;white-space:nowrap}
 .mq-track span b{color:var(--blue);font-weight:700}
+.mq-track a{color:inherit;text-decoration:none}
+.mq-track a:hover,.mq-track a:focus-visible{color:var(--blue);text-decoration:underline;text-underline-offset:4px}
+.marquee:hover .mq-track,.marquee:focus-within .mq-track{animation-play-state:paused}
 @keyframes mq{to{transform:translateX(-50%)}}
 
 /* ---------- sections ---------- */
 section.blk{padding:96px 0}
 .sec-head{max-width:44rem;margin-bottom:44px}
 .sec-head .tag{color:var(--blue);font-family:"Libre Franklin";font-weight:700;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase}
-.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800;margin:12px 0 12px;letter-spacing:-.01em}
+.sec-head h2{font-size:clamp(2.3rem,4.4vw,3.3rem);font-weight:800;margin:12px 0 12px;letter-spacing:-.01em}
 .sec-head p{color:var(--muted);margin:0}
 .reveal{transition:opacity .7s ease,transform .7s ease}
 
@@ -247,7 +250,7 @@ a.cover:focus-visible,a.f-img:focus-visible,a.about-photo:focus-visible,a.cb-img
 @media(max-width:860px){.about-grid{grid-template-columns:1fr}}
 .about-photo{border-radius:22px;overflow:hidden;border:1px solid var(--line2);box-shadow:var(--shadow)}
 .about-photo img{width:100%;height:auto;display:block}
-.about-grid h2{font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:800;margin-bottom:16px}
+.about-grid h2{font-size:clamp(2.3rem,4.2vw,3.2rem);font-weight:800;margin-bottom:16px}
 .about-grid p{color:var(--muted);margin:0 0 16px}
 .about-grid p b{color:var(--ink)}
 .values{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
@@ -284,7 +287,7 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:56px 0 34p
 
 /* ---------- home company intro + trio ---------- */
 .company-intro{max-width:820px;margin:0 auto;text-align:center}
-.company-intro h1{font-size:clamp(2.3rem,5.2vw,3.9rem);font-weight:800;letter-spacing:-.015em;margin:20px 0 16px}
+.company-intro h1{font-size:clamp(3rem,6.4vw,5rem);font-weight:800;letter-spacing:-.015em;margin:20px 0 16px}
 .company-intro h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .company-intro .lede{color:var(--muted);font-size:1.08rem;max-width:38rem;margin:0 auto 28px}
 .represent{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:860px;margin:38px auto 0;text-align:left}
@@ -307,7 +310,7 @@ footer{border-top:1px solid var(--line);background:var(--bg2);padding:56px 0 34p
 .view{display:none}
 .view.active{display:block;animation:fade .45s ease}
 .page-head{padding:148px 0 18px}
-.page-head h1,.page-head h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.015em;margin:16px 0 12px}
+.page-head h1,.page-head h2{font-size:clamp(2.8rem,6vw,4.6rem);font-weight:800;letter-spacing:-.015em;margin:16px 0 12px}
 .page-head h1 .grad,.page-head h2 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .page-head h2 .grad-gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .page-head p{color:var(--muted);max-width:38rem;margin:0;font-size:1.05rem}
@@ -504,9 +507,8 @@ picture{display:contents}
       <a href="#/ebooks" data-route="ebooks">E-Books</a>
       <a href="#/music" data-route="music">Music</a>
       <a href="#/podcast" data-route="podcast">Podcast</a>
-      <a href="#/circle" data-route="circle">The Circle</a>
+      <a href="#/circle" data-route="circle">The Prophet's Circle</a>
     </nav>
-    <a class="btn btn-pri btn-sm nav-cta" href="#/ebooks">Shop E-Books</a>
     <button id="burger" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>
 </header>
@@ -543,9 +545,9 @@ picture{display:contents}
     </div>
   </section>
 
-  <div class="marquee" aria-hidden="true">
+  <div class="marquee" aria-label="Explore: truth, purpose, music, podcast, books, community, Melbourne, growth">
     <div class="mq-track" id="mqTrack">
-      <span>Truth <b>·</b></span><span>Purpose <b>·</b></span><span>Music <b>·</b></span><span>Podcast <b>·</b></span><span>Books <b>·</b></span><span>Community <b>·</b></span><span>Melbourne <b>·</b></span><span>Growth <b>·</b></span>
+      <span><a href="#/about">Truth</a> <b>·</b></span><span><a href="#/about">Purpose</a> <b>·</b></span><span><a href="https://zeustheprophet.com/" target="_blank" rel="noopener">Music</a> <b>·</b></span><span><a href="#/podcast">Podcast</a> <b>·</b></span><span><a href="#digital-assets">Books</a> <b>·</b></span><span><a href="#/circle">Community</a> <b>·</b></span><span><a href="#/ebooks">Melbourne</a> <b>·</b></span><span><a href="#/ebooks">Growth</a> <b>·</b></span>
     </div>
   </div>
 
@@ -657,7 +659,7 @@ picture{display:contents}
         <a class="route-card reveal" href="#/ebooks"><picture><source srcset="assets/spiritual-survival-code-cover.webp" type="image/webp"><img src="assets/spiritual-survival-code-cover.jpg" alt="Cover of The Spiritual Survival Code, 11 Principles to Live By, written by Zaher Neket: gold lettering over dark storm clouds with a beam of light breaking through and a ring of symbols across the top" width="760" height="1086" decoding="async" loading="lazy"></picture><div class="rc-body"><h3>E-Books</h3><p>Books and guides in full, with every cover, price and buy link.</p><span class="rc-link">Open the E-Books page →</span></div></a>
         <a class="route-card reveal" href="#/music"><picture><source srcset="assets/rise-of-the-prophet-ep-cover.webp" type="image/webp"><img src="assets/rise-of-the-prophet-ep-cover.jpg" alt="The Rise of the Prophet EP cover: Zeus The Prophet in a black tank top, sunglasses and a cross necklace, with large golden wings and a glowing halo behind him against fiery orange clouds, with a Parental Advisory Explicit Content label in the corner" width="800" height="800" decoding="async" loading="lazy"></picture><div class="rc-body"><h3>Music</h3><p>The Rise of the Prophet EP, free for the people, and Unity, streaming, by Zeus The Prophet.</p><span class="rc-link">Open the Music page →</span></div></a>
         <a class="route-card reveal" href="#/podcast"><picture><source srcset="assets/zeus-podcast-cover.webp" type="image/webp"><img src="assets/zeus-podcast-cover.jpg" alt="The Zeus Podcast cover: a golden winged lion with rays of light behind it on a dark cloudy sky, with THE ZEUS PODCAST in gold lettering above and below" width="800" height="800" decoding="async" loading="lazy"></picture><div class="rc-body"><h3>The Podcast</h3><p>The Zeus Podcast, 31 episodes of real conversation.</p><span class="rc-link">Open the Podcast page →</span></div></a>
-        <a class="route-card reveal" href="#/circle"><picture><source srcset="assets/prophets-circle-artwork.webp" type="image/webp"><img src="assets/prophets-circle-artwork.jpg" alt="The Prophet's Circle artwork: six people sitting in a circle around a campfire at sunset, with a glowing cross in the sky above them and a church on a hill in the distance. Text reads Join the Path of Enlightenment and Awakening, The Prophet's Circle, and Seek Wisdom, Find Purpose, Embrace Unity." width="800" height="800" decoding="async" loading="lazy"></picture><div class="rc-body"><h3>The Prophet's Circle</h3><p>The community built through Christ Consciousness.</p><span class="rc-link">Open the Circle page →</span></div></a>
+        <a class="route-card reveal" href="#/circle"><picture><source srcset="assets/prophets-circle-artwork.webp" type="image/webp"><img src="assets/prophets-circle-artwork.jpg" alt="The Prophet's Circle artwork: six people sitting in a circle around a campfire at sunset, with a glowing cross in the sky above them and a church on a hill in the distance. Text reads Join the Path of Enlightenment and Awakening, The Prophet's Circle, and Seek Wisdom, Find Purpose, Embrace Unity." width="800" height="800" decoding="async" loading="lazy"></picture><div class="rc-body"><h3>The Prophet's Circle</h3><p>The community built through Christ Consciousness.</p><span class="rc-link">Open The Prophet's Circle page →</span></div></a>
       </div>
     </div>
   </section>
@@ -800,8 +802,8 @@ picture{display:contents}
         <span class="tag" style="color:var(--blue);font-family:"Libre Franklin";font-weight:700;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase">Community</span>
         <h3>Built through Christ Consciousness</h3>
         <p>The Prophet's Circle is the community around Zeus The Prophet, built through Christ Consciousness and the love of Jesus Christ, who is Zaher's Lord and Saviour first and foremost. A place to belong, grow and walk the journey together.</p>
-        <p style="color:var(--muted);margin:0 0 22px">Follow along as the Circle grows, and step in through Instagram.</p>
-        <div class="hp-links"><a class="btn btn-pri btn-sm" href="https://www.instagram.com/theprophetscircle/" target="_blank" rel="noopener">Join the Circle, free on Instagram</a><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/theofficialzeuspodcast/" target="_blank" rel="noopener">The Zeus Podcast</a></div>
+        <p style="color:var(--muted);margin:0 0 22px">Follow along as The Prophet's Circle grows, and step in through Instagram.</p>
+        <div class="hp-links"><a class="btn btn-pri btn-sm" href="https://www.instagram.com/theprophetscircle/" target="_blank" rel="noopener">Join The Prophet's Circle, free on Instagram</a><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/theofficialzeuspodcast/" target="_blank" rel="noopener">The Zeus Podcast</a></div>
       </div>
     </div>
     <div class="values" style="margin-top:22px">
@@ -811,9 +813,9 @@ picture{display:contents}
     </div>
     <div style="margin-top:34px;padding:28px;border:1px solid var(--line2);border-radius:var(--r);background:var(--panel)">
       <span class="tag" style="color:var(--gold);font-family:'Libre Franklin';font-weight:800;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase">Free to Join</span>
-      <h3 style="margin:10px 0 8px">Step inside the Circle. A community, not a mailing list.</h3>
+      <h3 style="margin:10px 0 8px">Step inside The Prophet's Circle. A community, not a mailing list.</h3>
       <p style="color:var(--muted);margin:0 0 20px">Real people, real faith, real growth, walking together through Christ Consciousness. The Prophet's Circle is free, there is no charge to join. Step in through Instagram.</p>
-      <div class="hp-links"><a class="btn btn-pri btn-sm" href="https://www.instagram.com/theprophetscircle/" target="_blank" rel="noopener">Join the Circle, free on Instagram</a></div>
+      <div class="hp-links"><a class="btn btn-pri btn-sm" href="https://www.instagram.com/theprophetscircle/" target="_blank" rel="noopener">Join The Prophet's Circle, free on Instagram</a></div>
     </div>
   </div></section>
 </div><!-- /view-circle -->
@@ -829,7 +831,7 @@ picture{display:contents}
       </div>
       <div>
         <h4>Explore</h4>
-        <a href="#/home">Home</a><a href="#/about">About</a><a href="#/ebooks">E-Books</a><a href="#/music">Music</a><a href="#/podcast">Podcast</a><a href="#/circle">The Circle</a>
+        <a href="#/home">Home</a><a href="#/about">About</a><a href="#/ebooks">E-Books</a><a href="#/music">Music</a><a href="#/podcast">Podcast</a><a href="#/circle">The Prophet's Circle</a>
       </div>
       <div>
         <h4>Listen</h4>
