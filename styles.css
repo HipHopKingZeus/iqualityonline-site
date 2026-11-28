@@ -1,6 +1,6 @@
 /* I.Quality Online: site styles
    Self-contained: no build step, no external stylesheets or font CDNs.
-   Brand colours are extracted from the two logo files by tools/build_assets.py
+   Brand colors are extracted from the two logo files by tools/build_assets.py
    and written into the PALETTE block below. */
 
 @font-face { font-family: "Cinzel"; src: url("fonts/Cinzel-Variable.ttf") format("truetype"); font-weight: 400 900; font-display: swap; }
